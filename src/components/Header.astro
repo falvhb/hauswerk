@@ -1,6 +1,9 @@
 ---
-
+const { default: innerHTML } = await import(`/logo.svg?raw`);
 ---
-<div class="bg-darkgreen">
-Header
+
+<div class="bg-darkgreen p-4">
+  <div style="max-width: 201px;" class="mx-auto">
+    <Fragment set:html={innerHTML} />
+  </div>
 </div>
