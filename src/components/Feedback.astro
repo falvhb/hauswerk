@@ -1,0 +1,8 @@
+---
+const { author } = Astro.props;
+---
+
+<div class="bg-neongreen text-center p-4 mb-8">
+  <quote class="italic"><slot /></quote>
+  {author && <p class="text-sm">{author}</p>}
+</div>
