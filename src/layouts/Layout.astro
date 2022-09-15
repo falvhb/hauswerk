@@ -1,0 +1,33 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import MarkDown from "../components/MarkDown.astro";
+import MetaTags from "../components/MetaTags.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <MetaTags title={frontmatter.title} description={frontmatter.description} />
+  </head>
+  <body>
+    <Header></Header>
+    <main class="container mx-auto max-w-xl px-4 mb-14">
+      <MarkDown>
+        <slot />
+      </MarkDown>
+    </main>
+    <Footer></Footer>
+    <style>
+      html {
+        font-family: system-ui, sans-serif;
+      }
+
+      body {
+        margin: 0;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+---
+const posts = await Astro.glob("../pages/*.mdx"); // returns an array of posts that live at ./src/pages/post/*.md
+---
+
+<div class="bg-neongreen text-center p-4">
+  {
+    posts
+      .map((post) => (
+        <a class="px-2" href={post.url || '/'}>{post.frontmatter.title}</a>
+      ))
+  }
+</div>

@@ -1,0 +1,40 @@
+---
+const {
+  description = "",
+  canonical,
+  noindex = false,
+  nofollow = false,
+  title = "",
+} = Astro.props;
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<title>{title}</title>
+<meta name="description" content={description} />
+{canonical && <link rel="canonical" href={canonical} />}
+
+<meta
+  name="robots"
+  content={`${noindex ? "noindex" : "index"}, ${
+    nofollow ? "nofollow" : "follow"
+  }`}
+/>
+
+<!-- Google / Search Engine Tags -->
+<meta itemprop="name" content={title} />
+<meta itemprop="description" content={description} />
+
+<!-- Facebook Meta Tags -->
+{canonical && <meta property="og:url" content={canonical} />}
+<meta property="og:type" content="website" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+
+<!-- Twitter Meta Tags -->
+{canonical && <meta name="twitter:url" content={canonical} />}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />

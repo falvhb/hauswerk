@@ -1,0 +1,37 @@
+---
+---
+
+<div class="main"><slot /></div>
+<style lang="scss" is:global>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  .main {
+    @layer components {
+      p {
+        @apply  pt-2 font-light pb-4;
+      } 
+
+      h1 {
+        @apply text-xl text-darkgreen pt-4 pb-2;
+      }
+
+      h2 {
+        @apply text-xl font-medium leading-5 text-darkgreen pt-8 pb-2;
+      }
+
+      h3 {
+        @apply text-base text-darkgreen pt-4 pb-2;
+      }
+
+      ul {
+        @apply my-3 ml-5 mb-8;
+      }
+
+      li {
+        @apply list-disc;
+      }
+    }
+  }
+</style>
