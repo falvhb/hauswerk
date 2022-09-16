@@ -1,10 +1,13 @@
 ---
 import Image from "./Image.astro";
+
+const { filename } = Astro.props;
+
 ---
 
 <div class="bg-gray-300 -mx-4 flex gap-4">
   <div class="flex-1">
-    <Image filename="portrait.jpg" alt="Uli Doll" />
+    <Image filename={filename} alt="Uli Doll" />
   </div>
   <div class="flex-1 m-4 text-sm">
     <slot />
