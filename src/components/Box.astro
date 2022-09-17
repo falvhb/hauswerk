@@ -1,15 +1,24 @@
 ---
+import { Picture } from "@astrojs/image/components";
 import Image from "./Image.astro";
 
-const { filename } = Astro.props;
+const { filename, alt } = Astro.props;
 
 ---
 
-<div class="bg-gray-300 -mx-4 flex gap-4">
-  <div class="flex-1">
-    <Image filename={filename} alt="Uli Doll" />
+<div class="bg-gray-200 -mx-4 flex gap-4">
+  <div class="flex-1 bg-white">
+
+    <Picture
+    src={"/images/" + filename}
+    aspectRatio={"1:1"}
+    widths={[200, 400, 800]}
+    sizes="(max-width: 800px) 100vw, 800px"
+    alt={alt}
+  />
+  
   </div>
-  <div class="flex-1 m-4 text-sm">
+  <div class="flex-1 mt-4 mr-4 text-sm">
     <slot />
   </div>
 </div>
