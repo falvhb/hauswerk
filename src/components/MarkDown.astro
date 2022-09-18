@@ -9,14 +9,19 @@
 
   .main > {
     @layer components {
-
-      p, h1, h2, h3, h4, h5, ul {
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      ul {
         @apply container mx-auto max-w-xl px-4;
-      }  
+      }
 
       p {
-        @apply  pt-2 font-light pb-4;
-      } 
+        @apply pt-2 font-light pb-4;
+      }
 
       h1 {
         @apply text-xl text-darkgreen pt-4 pb-2;
@@ -31,11 +36,11 @@
       }
 
       ul {
-        @apply  mb-8;
-      }
+        @apply mb-8 ;
 
-      li {
-        @apply list-disc;
+        li {
+          @apply ml-4 list-disc;
+        }
       }
     }
   }
