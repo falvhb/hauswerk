@@ -3,23 +3,25 @@ import { Picture } from "@astrojs/image/components";
 const { filename, alt, aspect = "1:1" } = Astro.props;
 ---
 
-<div class="-mx-4">
+<div class="">
   <Picture
     src={"/images/" + filename}
     aspectRatio={aspect || "1:1"}
-    widths={[200, 400, 800]}
+    widths={[250]}
     sizes="(max-width: 800px) 100vw, 800px"
     alt={alt}
   />
   <div class="flex">
-    <span class="self-end text-center w-full p-2 bg-neongreen bg-opacity-70">{ alt}</span></div>
+    <span class="self-end text-center w-full p-2 bg-neongreen bg-opacity-70"
+      >{alt}
+    </span>
+  </div>
 </div>
 
-
 <style>
-
   div {
     position: relative;
+    max-width: 250px;
   }
 
   div div {
@@ -30,5 +32,7 @@ const { filename, alt, aspect = "1:1" } = Astro.props;
     bottom: 0;
   }
 
-
+  div div span {
+    border-radius: 0 0 1rem 1rem;
+  }
 </style>

@@ -1,7 +1,14 @@
 ---
+const { centered } = Astro.props;
+
+const isCentered = true;
+
 ---
-<div class="horizontal-snap">
-  <slot/>
+
+<div class="mx-4 mb-8 flex">
+  <div class="horizontal-snap" class:list={[{'centered': isCentered}]}>
+    <slot />
+  </div>
 </div>
 <style is:global>
   .horizontal-snap {
@@ -10,10 +17,13 @@
     grid-auto-flow: column;
     gap: 1rem;
     height: calc(250px);
-    max-width: 480px;
     overflow-y: auto;
     overscroll-behavior-x: contain;
     scroll-snap-type: x mandatory;
+  }
+
+  .centered {
+    justify-content: center;
   }
 
   .horizontal-snap > div {
