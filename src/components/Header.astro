@@ -1,11 +1,98 @@
 ---
+import ToggleMenu from "./ToggleMenu.astro";
+
 const { default: innerHTML } = await import(`./logo.svg?raw`);
 ---
 
-<div class="bg-gray-900 p-4">
+<div class="bg-gray-900 pb-4 md:pb-0">
   <a href="/" title="HAUSWERK Köln - Handwerkliche Dienstleistungen">
     <div style="max-width: 250px;" class="pt-4 mx-auto">
       <Fragment set:html={innerHTML} />
     </div>
   </a>
+
+  <div class="md:hidden absolute top-5 right-5">
+    <ToggleMenu />
+  </div>
+
+  <div>
+    <div class="flex justify-between">
+      <div class="flex items-center"></div>
+    </div>
+    <nav
+      class=" md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto"
+      aria-label="Main navigation"
+      id="menu"
+    >
+      <ul
+        class="flex justify-center flex-col pt-8 md:pt-0 md:flex-row md:self-center collapse w-full collapsed text-xl md:text-base"
+      >
+      <li>
+        <a
+          class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+          href="/">Startseite</a
+        >
+      </li>
+      <li>
+          <a
+            class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+            href="/bewertungen">Bewertungen</a
+          >
+        </li>
+        <li>
+          <a
+            class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+            href="/kontakt"
+            >Kontakt
+          </a>
+        </li>
+      </ul>
+      <div class="md:self-center flex items-center mb-4 md:mb-0 ml-2"></div>
+    </nav>
+  </div>
 </div>
+
+<script is:inline>
+  // Set "light" theme as default
+  // if (!localStorage.theme) {
+  //   localStorage.theme = "light";
+  // }
+  if (
+    localStorage.theme === "dark" ||
+    (!("theme" in localStorage) &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches)
+  ) {
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+  }
+  function attachEvent(selector, event, fn) {
+    const matches = document.querySelectorAll(selector);
+    if (matches && matches.length) {
+      matches.forEach((elem) => {
+        elem.addEventListener(event, () => fn(elem), false);
+      });
+    }
+  }
+  window.onload = function () {
+    attachEvent("[data-aw-toggle-menu]", "click", function (elem) {
+      elem.classList.toggle("expanded");
+      document.body.classList.toggle("overflow-hidden");
+      document.getElementById("menu")?.classList.toggle("hidden");
+    });
+    attachEvent("[data-aw-toggle-color-scheme]", "click", function () {
+      document.documentElement.classList.toggle("dark");
+      localStorage.theme = document.documentElement.classList.contains("dark")
+        ? "dark"
+        : "light";
+    });
+  };
+  window.onpageshow = function () {
+    const elem = document.querySelector("[data-aw-toggle-menu]");
+    if (elem) {
+      elem.classList.remove("expanded");
+    }
+    document.body.classList.remove("overflow-hidden");
+    document.getElementById("menu")?.classList.add("hidden");
+  };
+</script>
