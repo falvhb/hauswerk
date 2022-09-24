@@ -1,12 +1,19 @@
 ---
 const posts = await Astro.glob("../pages/*.mdx"); // returns an array of posts that live at ./src/pages/post/*.md
+const { default: innerHTML } = await import(`./dach.svg?raw`);
 ---
 
-<div class="bg-neongreen text-sm text-center p-4 flex flex-wrap justify-center">
+<div class="bg-neongreen ">
+  <div class="text-sm text-center py-6 flex flex-wrap justify-center">
   {
-    posts
-      .map((post) => (
-        <a class="px-2 " href={post.url || '/'}>{post.frontmatter.title}</a>
-      ))
+    posts.map((post) => (
+      <a class="px-2 " href={post.url || "/"}>
+        {post.frontmatter.title}
+      </a>
+    ))
   }
+  </div>
+  <div class="flex flex-wrap justify-center py-8">
+    <Fragment set:html={innerHTML} />
+  </div>
 </div>
