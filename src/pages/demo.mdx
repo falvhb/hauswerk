@@ -26,18 +26,22 @@ import GalleryImage from "../components/GalleryImage.astro";
 
 ## Überschrift zweiten Grades H2
 
-## Überschrift dritten Grades H3
+### Überschrift dritten Grades H3
 
-- Möbelmontage und Möbelreparatur
-- Küchenmontage
-- Anschluss und Reparatur von Hausgeräten
-- Anbringen von Regalen, Halterungen, Lampen, etc.
+Normaler Text muss nicht besonders gekennzeichnet werden.
+Das einzige relevante ist ein harter Absatz. Dieser wird mit zweit
+Leerzeichen hinter dem Satz gekennzeichnet.
 
-## Rundumbetreuung:
+Ein **fetter** Text. Ein *kursiver* Text.
 
-- Reparatur und Wartung von Schlössern und Beschlägen
-- Sicherheitstechnik
-- Sanitärinstallationen und Reparaturen
+- Abzählungen benötigen nur einen Spielstrich
+- Alles andere wird automatisch gemacht
+- Uns so weiter
+
+## Gallerien
+
+Hier muss nur ein Bild im `/public/images` Ordner referenziert werden.
+Wichtig ist für Suchmaschinen das `alt` Atribut, weil es sonst eine Abstrafung gibt.
 
 <Gallery>
   <GalleryImage filename="BILD0065_1.jpeg" alt="Kücheneinbau" />
@@ -47,40 +51,21 @@ import GalleryImage from "../components/GalleryImage.astro";
   <GalleryImage filename="IMGP7778_1.jpeg" alt="Dacherneuerung" />
 </Gallery>
 
-## Kundenservice
+<Gallery>
+  <GalleryImage filename="BILD0065_1.jpeg" alt="Kücheneinbau" />
+</Gallery>
 
-- Betreuung und Instandhaltung von Objekten / Liegenschaften
-- Schlüsseldienst, Notöffnungen,
+## Info Box
 
 <Box filename="portrait.jpg" alt="Uli Doll">
-  **Die Mission von HAUSWERK Uli Doll** 
-  ist es, Lebens- und Arbeitsräume zu schaffen
-  und so zu optimieren, damit unter Berücksichtigung der zur Verfügung stehenden
-  Ressourcen, das größtmögliche Maß an Wohn- und Lebensqualität erreicht wird.
+  **Text in der Infobox** 
+  Ggf. relevant wenn man etwas besonderes Anzeigen möchte
 </Box>
 
-## Sie sind zufrieden – das ist die Hauptsache
 
-Rundum fachmännische Betreuung. Von der Beratung bis zur Erledigung Ihrer Wünsche.
+## Feedback Box
 
-Sie bekommen einfache und praktische Lösungen.
-
-Wir machen Festpreise oder Paketpreise ohne versteckte Kosten.
-
-Sie haben nur einen Ansprechpartner.
-
-Ihr Vorteil dabei: Sie brauchen nicht für jeden Handgriff einen separaten Servicedienst oder Handwerker zu rufen.
-
-Bei Hauswerk bekommen Sie genau das, was Sie brauchen – alles aus einer Hand.
-
-<Feedback author="Familie Robie, Köln">
-  Wir möchten uns noch mal herzlich bedanken für Ihre sehr gute und saubere
-  Arbeit. Besonders mir macht es wieder viel Freude in meiner "Neuen Küche" zu
-  wirken. Auch das Preis/Leistungsverhältnis stimmt in jedem Fall.
+<Feedback author="Author des Kommentars">
+  Hier kommt der Kommentar rein.
 </Feedback>
 
-
-<Feedback author="Dr. Baues, Bonn">
-  Ich habe mittlerweile mehrfach die Hilfe von Herrn Doll in Anspruch genommen,
-  was ja eigentlich schon alles sagt.
-</Feedback>
