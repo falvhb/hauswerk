@@ -3,7 +3,7 @@ import { Picture } from "@astrojs/image/components";
 const { filename, alt, aspect = "1:1" } = Astro.props;
 ---
 
-<div class="-mx-4">
+<div class="container mx-auto max-w-2xl rounded-2xl text-center p-4 mb-8">
   <Picture
     src={"/images/" + filename}
     aspectRatio={aspect || "1:1"}

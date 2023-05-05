@@ -1,0 +1,74 @@
+{
+  "body": [
+    {
+      "reviewer_name": "Hannah",
+      "job_title": "Handwerksdienste: Anbringen, Montieren; Türen oder Fenster, Schränk...",
+      "written_at": "2023-01-24T11:15:08+00:00",
+      "averageRatingScore": 10,
+      "clientExperience": "Bei meinem Einbaukühlschrank war einiges schief und die Tür schloss nicht richtig. Uli hat alle Ecken (so weit es ging) neu ausgerichtet und den Kühlschrank richtig reinmontiert. Hier und da durch die Schieflage des Korpus war es wirklich tricky und die Bohrungen in den Kühlschrank waren nach 2 Versuchen auch geschafft. Nach 2 Stunden war der Kühlschrank wieder nutzbar. Bin sehr zufrieden. Danke für die schnelle Hilfe!"
+    },
+    {
+      "reviewer_name": "Max",
+      "job_title": "Handwerksdienste: Anbringen, Montieren; Türen oder Fenster, Rahmen",
+      "written_at": "2023-01-22T17:58:20+00:00",
+      "averageRatingScore": 10,
+      "clientExperience": "Herr Ulrich Doll hat in meiner Wohnung im Badezimmer eine Duschkabine eingebaut, nachdem wir vorab ein sehr sympathisches Telefonat hatten und geschäftlich schnell auf einen gemeinsamen Nenner gekommen sind. \n\nIm Ergebnis ist es eine exzellente Arbeit und ein freundlicher sowie professioneller Umgang mit  schneller Rechnungsabwicklung gewesen. \nIch kann Herrn Doll als ehrlichen und sehr genauen Handwerker zu 100% weiterempfehlen. \n"
+    },
+    {
+      "reviewer_name": "Wencke",
+      "job_title": "Handwerksdienste: Anbringen, Montieren, lampe anschließen; Elektrik...",
+      "written_at": "2022-12-16T19:58:03+00:00",
+      "averageRatingScore": 10,
+      "clientExperience": "Sehr saubere, ordentliche Arbeit. Zuverlässiger und netter Kontakt. Gerne wieder :)"
+    },
+    {
+      "reviewer_name": "Sabine",
+      "job_title": "Handwerksdienste: Montieren; Briefkastenanlage",
+      "written_at": "2022-11-29T15:49:18+00:00",
+      "averageRatingScore": 10,
+      "clientExperience": "Alles perfekt! Zuverlässig und kompetent"
+    },
+    {
+      "reviewer_name": "Sandra",
+      "job_title": "Fertigmöbel aufbauen in 50825 Köln",
+      "written_at": "2022-09-25T18:28:21+00:00",
+      "averageRatingScore": 10,
+      "clientExperience": "Alles bestens. Sehr gerne wieder."
+    },
+    {
+      "reviewer_name": "Jean-Marc",
+      "job_title": "Kühlschrank bzw. Küchenschrank umbauen",
+      "written_at": "2022-09-04T11:27:52+00:00",
+      "averageRatingScore": 10,
+      "clientExperience": "Herr Doll ist zuverlässig, freundlich und professionell. Gerne wieder."
+    },
+    {
+      "reviewer_name": "Michael",
+      "job_title": "Regal aufbauen/ anbringen, Wanddekoration (z.B. Bild oder Spiegel) ...",
+      "written_at": "2022-08-27T15:44:49+00:00",
+      "averageRatingScore": 10,
+      "clientExperience": "Sehr freundlicher und schneller Kontakt- Herr Doll hat extrem sauber und präzise gearbeitet. Jerderzeit gerne wieder!"
+    },
+    {
+      "reviewer_name": "Anonymous",
+      "job_title": "Auftrag",
+      "written_at": "2022-08-22T18:34:06+00:00",
+      "averageRatingScore": 10,
+      "clientExperience": "Zuverlässig, freundlich und professionell - gerne wieder und volle Empfehlung!"
+    },
+    {
+      "reviewer_name": "Isabell",
+      "job_title": "Lampen und Gardinen(-stange) montieren in 50859 Köln",
+      "written_at": "2022-08-09T12:13:59+00:00",
+      "averageRatingScore": 10,
+      "clientExperience": "Wir waren sehr zufrieden."
+    },
+    {
+      "reviewer_name": "Steffen",
+      "job_title": "Austausch Rolladenpanzer außen",
+      "written_at": "2022-08-04T10:04:44+00:00",
+      "averageRatingScore": 10,
+      "clientExperience": "Zuverlässig, sehr freundlich, gute Kommunikation, saubere und genaue Arbeit."
+    }
+  ]
+}
